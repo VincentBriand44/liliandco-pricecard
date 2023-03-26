@@ -1,55 +1,38 @@
-# Portefolio by Vincent BRIAND
+# create-svelte
 
-Dynamic portfolio to make adding information easier
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Author
+## Creating a project
 
-- [@VincentBriand44](https://www.github.com/VincentBriand44)
-
-## Badge
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-## Features
-
-- JSON file for edit
-- Languages List
-- Projects List
-- Contact Section
-
-## Deployment
-
-To deploy this project run
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-  yarn run build
-  #or
-  npm run build
-  #or
-  pnpm run build
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-## Tech Stack
+## Developing
 
-**Client:** React, TailwindCSS
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-**Server:** none
+```bash
+npm run dev
 
-## License
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## Building
 
-# Hi, I'm Vincent! 👋
+To create a production version of your app:
 
-## 🚀 About Me
+```bash
+npm run build
+```
 
-I'm a french full stack developer...
+You can preview the production build with `npm run preview`.
 
-## 🛠 Skills
-
-Javascript, HTML, CSS, React, NodeJS...
-
-## 🔗 Links
-
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vincentbriand44.github.com)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vincent-briand44)
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
