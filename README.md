@@ -1,38 +1,52 @@
-# create-svelte
+# PriceCard Generator by Vincent BRIAND
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Price card generator for Lili & Co
 
-## Creating a project
+## Author
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [@VincentBriand44](https://www.github.com/VincentBriand44)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Badge
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Developing
+## Features
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- play with a friend
 
-```bash
-npm run dev
+## Deployment
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+To deploy this project run
 
 ```bash
-npm run build
+  yarn run build
+  #or
+  npm run build
+  #or
+  pnpm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Tech Stack
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+**Client:** Svelte
+
+**Server:** none
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+# Hi, I'm Vincent! 👋
+
+## 🚀 About Me
+
+I'm a french full stack developer...
+
+## 🛠 Skills
+
+Javascript, HTML, CSS, React, NodeJS...
+
+## 🔗 Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vincentbriand44.github.com)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vincent-briand44)
