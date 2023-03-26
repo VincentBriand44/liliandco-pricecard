@@ -29,7 +29,7 @@ To deploy this project run
 
 ## Tech Stack
 
-**Client:** React, TailwindCSS
+**Client:** React
 
 **Server:** none
 
