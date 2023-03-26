@@ -1,11 +1,11 @@
 @font-face {
   font-family: lightLemonMilk;
-  src: url('../../../public/assets/fonts/LEMONMILK-Light.otf');
+  src: url('/assets/fonts/LEMONMILK-Light.otf');
 }
 
 @font-face {
   font-family: mediumLemonMilk;
-  src: url('../../../public/assets/fonts/LEMONMILK-Medium.otf');
+  src: url('/assets/fonts/LEMONMILK-Medium.otf');
 }
 
 @page {
@@ -16,25 +16,23 @@ html {
   margin: 0;
   box-sizing: border-box;
   background: #e4e4e4;
+  font-family: mediumLemonMilk;
 }
 
-h1 {
-  font-size: 1em;
+input {
+  font-family: inherit;
   text-align: center;
-  font-family: mediumLemonMilk;
   color: #aca2a3;
   letter-spacing: 2px;
-  margin: 0;
   width: 100%;
+  background: none;
+  border: none;
 }
 
-h2 {
+input.h2 {
   font-size: .5em;
   line-height: .5em;
-  text-align: center;
-  letter-spacing: 2px;
   font-family: lightLemonMilk;
-  color: #aca2a3;
 }
 
 img {
@@ -50,7 +48,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
 
-  background: white;
+  background: #fff;
   margin: 0 auto;
   margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
@@ -61,6 +59,7 @@ img {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -72,11 +71,21 @@ img {
   border-bottom: dashed 1px black;
 }
 
-.card div {
-  height: 2em;
-  display: flex;
-  align-items: center;
+.remove {
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #d40015;
+}
 
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 80px;
+  color: #00a300;
 }
 
 @media print {
@@ -85,5 +94,15 @@ img {
   .page {
     margin: 0;
     box-shadow: 0;
+    margin-bottom: 2mm;
+  }
+
+  .remove,
+  .add {
+    display: none;
+  }
+
+  .remove-page .page:last-child {
+    display: none;
   }
 }

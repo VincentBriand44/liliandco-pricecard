@@ -1,38 +1,81 @@
-import { useEffect, useState } from 'react'
-import config from './config.json'
+import { useState } from 'react'
 
 import image from './assets/img/logo.png'
 
 const App = () => {
-  const [pages, setPages] = useState([])
+  const [cards, setCards] = useState([
+    { title: 'title', size: '3/6 mois', fontCalc: 21 }
+  ])
 
-  useEffect(() => {
-    const pages = []
+  const pages = Array(Math.trunc(cards.length / 20) + 1).fill('')
 
-    for (let i = 0; i < config.length; i++) {
-      if (i === 0 || i % 20 === 0) pages.push([])
-      pages[Math.trunc(i / 20)].push(config[i])
-    }
-    setPages(pages)
-  }, [])
+  const handleChangeTitle = e => {
+    const { name, value } = e.currentTarget
+    const newCard = [...cards]
+    newCard[name].title = value
+    newCard[name].fontCalc = 26 - value.length
+    setCards(newCard)
+  }
 
-  return pages.map((page, index) => (
-    <div className='page' key={index}>
-      {page.map((item, i) => {
-        const size = 26 - item.name.length
-        const calc = size > 7 ? size : 7
-        return (
-          <div key={i} className='card'>
-            <div>
-              <h1 style={{ fontSize: calc }}>{item.name}</h1>
+  const handleChangeSize = e => {
+    const { name, value } = e.currentTarget
+    const newCard = [...cards]
+    newCard[name].size = value
+    setCards(newCard)
+  }
+
+  const handleRemove = i => {
+    const newCard = [...cards]
+    newCard.splice(i, 1)
+    setCards(newCard)
+  }
+
+  return (
+    <section className={cards.length % 20 === 0 ? 'remove-page' : ''}>
+      {pages.map((_, numPage) => (
+        <div className='page' key={numPage}>
+          {cards.map(({ title, size, fontCalc }, i) => {
+            if (i >= numPage * 20 && i < (numPage + 1) * 20 && i < cards.length)
+              return (
+                <div key={i} className='card'>
+                  <div className='remove' onClick={() => handleRemove(i)}>
+                    X
+                  </div>
+                  <input
+                    style={{ fontSize: fontCalc > 7 ? fontCalc : 7 }}
+                    type='text'
+                    name={i}
+                    value={title}
+                    onChange={handleChangeTitle}
+                  />
+                  <input
+                    className='h2'
+                    type='text'
+                    name={i}
+                    value={size}
+                    onChange={handleChangeSize}
+                  />
+                  <img src={image} />
+                </div>
+              )
+          })}
+          {numPage === pages.length - 1 && (
+            <div
+              className='add'
+              onClick={() =>
+                setCards([
+                  ...cards,
+                  { title: 'title', size: '3/6 mois', fontCalc: 21 }
+                ])
+              }
+            >
+              +
             </div>
-            <h2>{item.size}</h2>
-            <img src={image} />
-          </div>
-        )
-      })}
-    </div>
-  ))
+          )}
+        </div>
+      ))}
+    </section>
+  )
 }
 
 export default App
