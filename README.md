@@ -1,6 +1,6 @@
 # Portefolio by Vincent BRIAND
 
-Dynamic portfolio to make adding information easier
+Price card generator for Lili & Co
 
 ## Author
 
@@ -13,9 +13,7 @@ Dynamic portfolio to make adding information easier
 ## Features
 
 - JSON file for edit
-- Languages List
-- Projects List
-- Contact Section
+- Easy for print
 
 ## Deployment
 
