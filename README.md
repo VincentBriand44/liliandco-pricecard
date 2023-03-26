@@ -12,7 +12,8 @@ Price card generator for Lili & Co
 
 ## Features
 
-- play with a friend
+- JSON file for edit
+- Easy for print
 
 ## Deployment
 
