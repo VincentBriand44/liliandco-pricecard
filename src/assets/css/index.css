@@ -1,0 +1,89 @@
+@font-face {
+  font-family: lightLemonMilk;
+  src: url('../../../public/assets/fonts/LEMONMILK-Light.otf');
+}
+
+@font-face {
+  font-family: mediumLemonMilk;
+  src: url('../../../public/assets/fonts/LEMONMILK-Medium.otf');
+}
+
+@page {
+  size: A4;
+}
+
+html {
+  margin: 0;
+  box-sizing: border-box;
+  background: #e4e4e4;
+}
+
+h1 {
+  font-size: 1em;
+  text-align: center;
+  font-family: mediumLemonMilk;
+  color: #aca2a3;
+  letter-spacing: 2px;
+  margin: 0;
+  width: 100%;
+}
+
+h2 {
+  font-size: .5em;
+  line-height: .5em;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: lightLemonMilk;
+  color: #aca2a3;
+}
+
+img {
+  height: 140px;
+  width: initial;
+  object-fit: contain;
+}
+
+.page {
+  width: 21cm;
+  height: 29.7cm;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  background: white;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+
+  /* découpe */
+  border-left: dashed 1px black;
+  border-top: dashed 1px black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 2mm;
+  max-height: calc(29.7cm / 5 - 2mm);
+
+  /* découpe */
+  border-right: dashed 1px black;
+  border-bottom: dashed 1px black;
+}
+
+.card div {
+  height: 2em;
+  display: flex;
+  align-items: center;
+
+}
+
+@media print {
+
+  body,
+  .page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
