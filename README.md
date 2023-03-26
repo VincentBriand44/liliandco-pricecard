@@ -1,4 +1,4 @@
-# Portefolio by Vincent BRIAND
+# PriceCard Generator by Vincent BRIAND
 
 Price card generator for Lili & Co
 
@@ -29,7 +29,7 @@ To deploy this project run
 
 ## Tech Stack
 
-**Client:** React
+**Client:** Svelte
 
 **Server:** none
 
