@@ -12,7 +12,7 @@ Price card generator for Lili & Co
 
 ## Features
 
-- JSON file for edit
+- Easy for edit
 - Easy for print
 
 ## Deployment
