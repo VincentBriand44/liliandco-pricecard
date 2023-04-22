@@ -54,6 +54,7 @@
 							on:change={handleChangeTitle}
 						/>
 						<input class="h2" type="text" name={i} value={size} on:change={handleChangeSize} />
+						<input class="price" type="text" value="10€" />
 						<img src={image} alt="logo" draggable="false" />
 					</div>
 				{/if}
@@ -99,6 +100,14 @@
 		font-size: 0.5em;
 		line-height: 0.5em;
 		font-family: lightLemonMilk;
+	}
+
+	input.price {
+		position: absolute;
+		font-size: 0.7em;
+		width: 40%;
+		top: 40%;
+		right: 0;
 	}
 
 	img {
