@@ -1,6 +1,6 @@
 const menu = [
 	{ title: 'Price Cards', link: '/pricecards' },
-	{ title: 'Autre', link: '/other' }
+	{ title: 'Big Cards', link: '/bigcards' }
 ];
 export const prerender = true;
 

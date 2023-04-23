@@ -146,7 +146,7 @@
 		flex-direction: column;
 		justify-content: end;
 		padding-bottom: 2mm;
-		max-height: calc(29.7cm / 5 - 2mm);
+		max-height: calc(29.7cm / 5);
 
 		/* découpe */
 		border-right: dashed 1px black;
@@ -185,8 +185,8 @@
 			display: none;
 		}
 
-		/* .remove-page .page:last-child {
+		.remove-page .page:last-child {
 			display: none;
-		} */
+		}
 	}
 </style>
