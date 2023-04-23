@@ -1,6 +1,7 @@
 const menu = [
 	{ title: 'Price Cards', link: '/pricecards' },
-	{ title: 'Big Cards', link: '/bigcards' }
+	{ title: 'Big Cards', link: '/bigcards' },
+	{ title: 'Cleaning Cards', link: '/cleaningcards' }
 ];
 export const prerender = true;
 

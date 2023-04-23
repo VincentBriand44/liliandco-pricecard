@@ -1,5 +1,5 @@
 <script>
-	import image from '../../assets/img/logo.png';
+	import image from '../../assets/img/qrcode.png';
 
 	export let data;
 	let cards = data.cards;
@@ -10,21 +10,6 @@
 		const { name, value } = e.currentTarget;
 		const newCard = [...cards];
 		newCard[name].title = value;
-		newCard[name].fontCalc = 26 - value.length;
-		cards = newCard;
-	};
-
-	const handleChangeSize = (e) => {
-		const { name, value } = e.currentTarget;
-		const newCard = [...cards];
-		newCard[name].size = value;
-		cards = newCard;
-	};
-
-	const handleChangePrice = (e) => {
-		const { name, value } = e.currentTarget;
-		const newCard = [...cards];
-		newCard[name].price = value;
 		cards = newCard;
 	};
 
@@ -36,7 +21,7 @@
 	};
 
 	const handleAdd = () => {
-		cards = [...cards, { title: 'title', size: '3/6 mois', price: '10€', fontCalc: 21 }];
+		cards = [...cards, { title: "Conseil d'entretien" }];
 		pagesReload();
 	};
 
@@ -48,20 +33,13 @@
 <section class={cards.length % 20 === 0 ? 'remove-page' : ''}>
 	{#each pages as _, numPage}
 		<div class="page">
-			{#each cards as { title, size, fontCalc, price }, i}
+			{#each cards as { title }, i}
 				{#if i >= numPage * 20 && i < (numPage + 1) * 20 && i < cards.length}
 					<div class="card">
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<div class="remove" on:click={() => handleRemove(i)}>X</div>
-						<input
-							style={`font-size: ${fontCalc > 7 ? fontCalc : 7}px`}
-							type="text"
-							name={i}
-							value={title}
-							on:change={handleChangeTitle}
-						/>
-						<input class="h2" type="text" name={i} value={size} on:change={handleChangeSize} />
-						<input class="price" type="text" name={i} value={price} on:change={handleChangePrice} />
+						<input type="text" name={i} value={title} on:change={handleChangeTitle} />
+						<div class="after" />
 						<img src={image} alt="logo" draggable="false" />
 					</div>
 				{/if}
@@ -75,46 +53,30 @@
 </section>
 
 <style>
-	@font-face {
-		font-family: lightLemonMilk;
-		src: url('/src/assets/fonts/LEMONMILK-Light.otf');
-	}
-
-	@font-face {
-		font-family: mediumLemonMilk;
-		src: url('/src/assets/fonts/LEMONMILK-Medium.otf');
-	}
-
-	:global(html) {
-		margin: 0;
-		box-sizing: border-box;
-		background: #e4e4e4;
-		font-family: mediumLemonMilk;
-		user-select: none;
-	}
-
 	input {
-		font-family: inherit;
+		position: relative;
+		box-sizing: border-box;
+		font-size: 0.5rem;
+		font-family: lightLemonMilk;
 		text-align: center;
-		color: #aca2a3;
+		font-weight: 200;
+		color: #ffffff;
 		letter-spacing: 2px;
-		width: 100%;
+		width: 80%;
+		margin: 0 10%;
+		padding: 0.5rem 1rem;
 		background: none;
 		border: none;
+		background-color: #bb8f77;
+		border-radius: 0.5rem;
 	}
 
-	input.h2 {
-		font-size: 0.5em;
-		line-height: 0.5em;
-		font-family: lightLemonMilk;
-	}
-
-	input.price {
-		position: absolute;
-		font-size: 0.7em;
-		width: 40%;
-		top: 40%;
-		right: 0;
+	.after {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 1rem 1rem 0 1rem;
+		border-color: #bb8f77 transparent transparent transparent;
 	}
 
 	img {
@@ -144,7 +106,8 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: end;
+		justify-content: center;
+		align-items: center;
 		padding-bottom: 2mm;
 		max-height: calc(29.7cm / 5);
 
