@@ -1,4 +1,4 @@
-const cards = [{ title: 'title', size: '3/6 mois', fontCalc: 21 }];
+const cards = [{}];
 export const prerender = true;
 
 export const load = () => {
