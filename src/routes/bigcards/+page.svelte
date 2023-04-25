@@ -64,8 +64,8 @@
 		box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 
 		/* découpe */
-		border-left: dashed 1px black;
-		border-top: dashed 1px black;
+		border-left: dashed 1px #00000005;
+		border-top: dashed 1px #00000005;
 		box-sizing: border-box;
 	}
 
@@ -76,8 +76,8 @@
 		max-height: calc(29.7cm / 2);
 
 		/* découpe */
-		border-right: dashed 1px black;
-		border-bottom: dashed 1px black;
+		border-right: dashed 1px #00000005;
+		border-bottom: dashed 1px #00000005;
 	}
 
 	.remove {
