@@ -36,7 +36,7 @@
 	};
 
 	const handleAdd = () => {
-		cards = [...cards, { title: 'title', size: '3/6 mois', price: '10€', fontCalc: 21 }];
+		cards = [...cards, { title: 'title', size: '3/6 mois', price: '99€', fontCalc: 21 }];
 		pagesReload();
 	};
 
