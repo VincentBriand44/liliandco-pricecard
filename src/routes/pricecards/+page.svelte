@@ -118,7 +118,8 @@
 	}
 
 	img {
-		height: 140px;
+		height: 130px;
+		margin-top: 4px;
 		width: initial;
 		object-fit: contain;
 	}
