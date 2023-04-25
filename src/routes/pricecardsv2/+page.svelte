@@ -178,7 +178,7 @@
 		flex-direction: column;
 		justify-content: end;
 		padding-bottom: 2mm;
-		max-height: calc(29.7cm / 3);
+		max-height: calc(29.7cm / 3 - 2mm);
 
 		/* découpe */
 		border-right: dashed 1px #00000020;
