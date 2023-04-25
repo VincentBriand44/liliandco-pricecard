@@ -118,7 +118,8 @@
 	}
 
 	img {
-		height: 140px;
+		height: 130px;
+		margin-top: 4px;
 		width: initial;
 		object-fit: contain;
 	}
@@ -136,8 +137,8 @@
 		box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 
 		/* découpe */
-		border-left: dashed 1px #00000010;
-		border-top: dashed 1px #00000010;
+		border-left: dashed 1px #00000020;
+		border-top: dashed 1px #00000020;
 	}
 
 	.card {
@@ -149,8 +150,8 @@
 		max-height: calc(29.7cm / 5);
 
 		/* découpe */
-		border-right: dashed 1px #00000010;
-		border-bottom: dashed 1px #00000010;
+		border-right: dashed 1px #00000020;
+		border-bottom: dashed 1px #00000020;
 	}
 
 	.remove {
