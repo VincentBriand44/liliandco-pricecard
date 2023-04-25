@@ -122,7 +122,7 @@
 	}
 
 	img {
-		height: 130px;
+		height: 165px;
 		margin-top: 8px;
 		width: initial;
 		object-fit: contain;
@@ -130,14 +130,15 @@
 
 	h2 {
 		box-sizing: border-box;
-		font-size: 0.3rem;
-		font-family: lightLemonMilk;
+		font-size: 0.35rem;
+		line-height: 0.35rem;
+		font-family: mediumLemonMilk;
 		text-align: center;
 		font-weight: 200;
 		color: #aca2a3;
 		letter-spacing: 2px;
 		width: 80%;
-		margin: 24px 10% 0;
+		margin: 12px 10% 0;
 		padding: 0.25rem 1rem;
 		background: none;
 		border: none;
@@ -185,7 +186,7 @@
 	}
 
 	.qrcode {
-		margin: 8px 0 6px;
+		margin: 4px 0 6px;
 		height: 75px;
 	}
 
