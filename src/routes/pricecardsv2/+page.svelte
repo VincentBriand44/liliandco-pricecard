@@ -122,7 +122,7 @@
 	}
 
 	img {
-		height: 165px;
+		height: 150px;
 		margin-top: 8px;
 		width: initial;
 		object-fit: contain;
@@ -187,7 +187,7 @@
 
 	.qrcode {
 		margin: 4px 0 6px;
-		height: 75px;
+		height: 60px;
 	}
 
 	.remove {
