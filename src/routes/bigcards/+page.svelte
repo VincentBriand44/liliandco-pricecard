@@ -45,8 +45,8 @@
 
 <style>
 	img {
-		height: 6cm;
-		margin-left: 5mm;
+		height: 8cm;
+		margin-left: 12mm;
 		width: initial;
 		object-fit: contain;
 	}
